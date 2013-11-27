@@ -1,0 +1,16 @@
+{
+  "name": "lab-sensor-applet-interface",
+  "version": "0.1.0",
+  "description": "Javascript interface to Concord Consortium's Vernier sensor interface applet (https://github.com/concord-consortium/sensor-applets)",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": ">= 2.35 < 3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p dist && browserify main.js --standalone sensor-applet-interface > dist/sensor-applet-interface.js"
+  },
+  "author": "Richard Klancer <rpk@pobox.com>",
+  "licenses": ["MIT", "Simplified BSD", "Apache 2.0"]
+}
