@@ -16,5 +16,9 @@
     "serve": "beefy main.js:sensor-applet-interface.js -- --standalone sensor-applet-interface"
   },
   "author": "Richard Klancer <rpk@pobox.com>",
-  "licenses": ["MIT", "Simplified BSD", "Apache 2.0"]
+  "licenses": [
+    "MIT",
+    "Simplified BSD",
+    "Apache 2.0"
+  ]
 }
