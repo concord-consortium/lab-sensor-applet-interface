@@ -9,8 +9,17 @@ module.exports = function(grunt) {
       	src: 'main.js',
       	dest: 'dist/sensor-applet-interface.js'
       }
+    },
+    copy: {
+      dist: {
+      	src: 'examples/**',
+      	dest: 'dist/'
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+
+  grunt.registerTask('default', ['browserify', 'copy']);
 };
