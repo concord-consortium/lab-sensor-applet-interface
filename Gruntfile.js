@@ -1,19 +1,22 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    distPath: 'dist',
     browserify: {
       options: {
         standalone: 'sensor-applet-interface'
       },
       dist: {
       	src: 'main.js',
-      	dest: 'dist/sensor-applet-interface.js'
+      	dest: '<%= distPath %>/sensor-applet-interface.js'
       }
     },
     copy: {
       dist: {
-      	src: 'examples/**',
-      	dest: 'dist/'
+      	files: [
+          {src: 'examples/**', dest: '<%= distPath %>/'},
+          {src: 'README-dist.md', dest: '<%= distPath %>/README.md'}
+      	]
       }
     }
   });
