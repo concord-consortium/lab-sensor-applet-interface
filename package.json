@@ -6,11 +6,13 @@
   "dependencies": {},
   "devDependencies": {
     "browserify": ">= 2.35 < 3.0",
-    "beefy": ">= 0.6.0"
+    "beefy": ">= 0.6.0",
+    "grunt": "~0.4.2",
+    "grunt-browserify": "~1.2.11"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "mkdir -p dist && browserify main.js --standalone sensor-applet-interface > dist/sensor-applet-interface.js",
+    "build": "grunt browserify",
     "serve": "beefy main.js:sensor-applet-interface.js -- --standalone sensor-applet-interface"
   },
   "author": "Richard Klancer <rpk@pobox.com>",
