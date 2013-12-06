@@ -1,0 +1,6 @@
+---
+# password and alias for Java siging certificate.
+:java:
+  :password: abc123
+  :alias: sample-keystore
+  :keystore_path: jars/sample-keystore.jks

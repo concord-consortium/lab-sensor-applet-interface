@@ -1,2 +1,4 @@
 node_modules/
 dist/
+jars/config.yml
+jars/projects/
