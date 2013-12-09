@@ -18,11 +18,22 @@ module.exports = function(grunt) {
           {src: 'README-dist.md', dest: '<%= distPath %>/README.md'}
       	]
       }
+    },
+    connect: {
+      dev: {
+      	options: {
+          keepalive: true,
+          base: 'dist',
+          port: '8000',
+          open: 'http://localhost:<%=connect.dev.options.port%>/examples/'
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   grunt.registerTask('default', ['browserify', 'copy']);
 };

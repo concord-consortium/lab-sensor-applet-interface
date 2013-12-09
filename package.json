@@ -9,12 +9,12 @@
     "beefy": ">= 0.6.0",
     "grunt": "~0.4.2",
     "grunt-browserify": "~1.2.11",
-    "grunt-contrib-copy": "~0.4.1"
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-connect": "~0.5.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "grunt",
-    "serve": "beefy main.js:sensor-applet-interface.js -- --standalone sensor-applet-interface"
+    "build": "grunt"
   },
   "author": "Richard Klancer <rpk@pobox.com>",
   "licenses": [

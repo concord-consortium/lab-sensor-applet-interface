@@ -25,12 +25,11 @@ repository](http://github.com/concord-consortium/lab-sensor-applet-interface-dis
 
 ### Running the examples and changing the code
 
-1. install the dependencies: `npm install`
-2. run a dev server: `npm run serve`
-3. open your web browser to [http://localhost:9966/examples/]
-
-In this mode you can make changes to the files in `lib` and your changes will be reflected when reloading the pages.
-We are using [Beefy](http://didact.us/beefy/) for this, it has more advanced features you might like.
+1. build project (see above)
+2. run a dev server and open browser: `grunt connect`
+3. make a change to a js file
+4. rebuild built project: `npm run build`
+5. reload the page in the browser
 
 ### Deploy dist repository
 
