@@ -38,7 +38,7 @@ PROJECT_LIST = {
   'sensor'         => { :build_type => :download,
                         :url => 'http://jnlp.concord.org/dev3/org/concord/sensor/sensor/sensor-1.0-20130909.215301-41.jar',
                         :version => '1.0-20130909.215301-41',
-                        :path => 'org/concord/sensor',
+                        :path => '',
                         :sign => true },
 
   'sensor-applets' => { :build_type => :maven,
@@ -46,31 +46,31 @@ PROJECT_LIST = {
                         :repository => 'git://github.com/concord-consortium/sensor-applets.git',
                         :branch => 'master',
                         :commit => 'v2.0.2',
-                        :path => 'org/concord/sensor/sensor-applets',
+                        :path => '',
                         :has_applet_class => true,
                         :sign => true },
 
   'sensor-vernier' => { :build_type => :download,
                         :url => 'http://jnlp.concord.org/dev3/org/concord/sensor/sensor-vernier/sensor-vernier-1.0-20130909.215301-42.jar',
                         :version => '1.0-20130909.215301-42',
-                        :path => 'org/concord/sensor/sensor-vernier',
+                        :path => '',
                         :sign => true },
 
   'goio-jna'       => { :build_type => :download,
                         :url => 'http://jnlp.concord.org/dev3/org/concord/sensor/goio-jna/goio-jna-1.0-20130314.171142-34.jar',
                         :version => '1.0-20130314.171142-34',
-                        :path => 'org/concord/sensor/goio-jna',
+                        :path => '',
                         :sign => true },
 
   'labquest-jna'   => { :build_type => :download,
                         :url => 'http://jnlp.concord.org/dev3/org/concord/sensor/labquest-jna/labquest-jna-1.0-20130909.215301-42.jar',
                         :version => '1.0-20130909.215301-42',
-                        :path => 'org/concord/sensor/labquest-jna',
+                        :path => '',
                         :sign => true },
 
   'jna'            => { :build_type => :download,
                         :url => 'http://search.maven.org/remotecontent?filepath=net/java/dev/jna/jna/3.5.1/jna-3.5.1.jar',
                         :version => '3.5.1',
-                        :path => 'com/sun/jna',
+                        :path => '',
                         :sign => true }
 }
