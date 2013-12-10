@@ -54,7 +54,10 @@ else
   HEREDOC
 end
 
-jars = Dir["#{PUBLIC_ROOT}/jnlp/**/*.jar"]
+# look for the most recent timestamp folder
+RECENT_JNLP_ROOT = Dir.glob("#{PROJECT_ROOT}/dist/jars/*/").max_by {|f| File.mtime(f)}
+
+jars = Dir["#{RECENT_JNLP_ROOT}/**.jar"]
 if @regex
   jars = jars.grep(/#{@regex}/)
 end

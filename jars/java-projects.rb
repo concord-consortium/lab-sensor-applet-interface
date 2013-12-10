@@ -8,9 +8,8 @@ PROJECT_ROOT = File.expand_path('..',  __FILE__) if !defined? PROJECT_ROOT
 JAVA_ROOT    = File.join(PROJECT_ROOT, 'jars/projects')
 PUBLIC_ROOT  = File.join(PROJECT_ROOT, 'dist')
 
-JNLP_ROOT    = File.join(PROJECT_ROOT, 'dist/jnlp')
-
-TIMESTAMP = Time.now.strftime("%Y%m%d.%H%M%S")
+TIMESTAMP = Time.now.utc.strftime("%Y%m%d.%H%M%S")
+JNLP_ROOT    = "#{PROJECT_ROOT}/dist/jars/#{TIMESTAMP}"
 
 MAVEN_CLEAN = "mvn clean"
 

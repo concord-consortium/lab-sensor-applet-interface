@@ -203,7 +203,7 @@ projects.each do |project, options|
       when :copy_jars
         versioned_name = File.basename(source)
       when :download
-        versioned_name = "#{project}__V#{options[:version]}.jar"
+        versioned_name = "#{project}.jar"
       else
         version_template = project_token[:version_template]
         existing_jars = Dir["#{to_path}/*.jar"]
@@ -213,7 +213,7 @@ projects.each do |project, options|
           new_jar_index = existing_jars.sort.last[/-(\d+)\.jar$/, 1].to_i + 1
         end
         version_str = "__V#{version_template}-" + TIMESTAMP + "-#{new_jar_index}"
-        versioned_name = project + version_str + '.jar'
+        versioned_name = project + '.jar'
       end
       destination = File.join(to_path, versioned_name)
       if (File.exists? destination) && !@force_update
