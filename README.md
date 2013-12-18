@@ -21,7 +21,22 @@ repository](http://github.com/concord-consortium/lab-sensor-applet-interface-dis
 ### Building the Project
 
 1. install the dependencies: `npm install`
-2. build it: `npm run build`
+2. build or fetch the jars (see below)
+3. build it: `npm run build`
+
+#### Fetch the jars from the dist repository
+
+1. git clone git://github.com/concord-consortium/lab-sensor-applet-interface-dist.git dist
+2. ./update-timestamp.rb
+
+#### Build the jars
+
+1. cd jars
+2. ./build-jars.rb
+3. ./update-timestamp.rb
+
+Note these scripts require ruby 2.0, the .ruby-version file in the jars folder will take care of this if you have
+rvm or rbenv setup.
 
 ### Running the examples and changing the code
 
