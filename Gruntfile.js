@@ -25,7 +25,8 @@ module.exports = function(grunt) {
           keepalive: true,
           base: 'dist',
           port: '8000',
-          open: 'http://localhost:<%=connect.dev.options.port%>/examples/'
+          open: 'http://localhost:<%=connect.dev.options.port%>/examples/',
+          hostname: '*'
         }
       }
     }
