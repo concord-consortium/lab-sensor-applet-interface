@@ -56,13 +56,13 @@ PROJECT_LIST = {
                         :sign => true },
 
   'goio-jna'       => { :build_type => :download,
-                        :url => 'http://jnlp.concord.org/dev3/org/concord/sensor/goio-jna/goio-jna-1.0-20130314.171142-34.jar',
+                        :url => 'http://jnlp.concord.org/dev3/org/concord/sensor/goio-jna/goio-jna-1.0-20140311.155732-45.jar',
                         :version => '1.0-20130314.171142-34',
                         :path => '',
                         :sign => true },
 
   'labquest-jna'   => { :build_type => :download,
-                        :url => 'http://jnlp.concord.org/dev3/org/concord/sensor/labquest-jna/labquest-jna-1.0-20130909.215301-42.jar',
+                        :url => 'http://jnlp.concord.org/dev3/org/concord/sensor/labquest-jna/labquest-jna-1.0-20140311.155834-43.jar',
                         :version => '1.0-20130909.215301-42',
                         :path => '',
                         :sign => true },
