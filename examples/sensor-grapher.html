@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <title>Vernier GoIO Sensor Grapher</title>
-    <link rel="stylesheet" href="http://lab.concord.org/grapher.css">
+    <link rel="stylesheet" href="http://lab-framework.concord.org/grapher.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href='style.css' rel='stylesheet' type='text/css' />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
@@ -12,7 +12,7 @@
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>    
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.3.10/d3.min.js"></script>
-    <script type="text/javascript" src="http://lab.concord.org/lab/lab.grapher.js"></script>
+    <script type="text/javascript" src="http://lab-framework.concord.org/lab/lab.grapher.js"></script>
     <script src="../sensor-applet-interface.js"></script>
   </head>
   <body>
@@ -77,6 +77,11 @@
       This example uses a small Java applet running in the background to collect data from the probe and pass it to the graph.
     </p>
     <script type="text/javascript">
+      var appletGlobal = null;
+
+      // wrap this in a anonymous function to avoid extra globals
+      (function () {
+
       var vis = document.getElementById("vis"),
           blankGraphOptions = {
             title: "GoIO Sensor Graph",
@@ -95,7 +100,6 @@
             dataChange: false
           },
           graph = new Lab.grapher.Graph("#chart", blankGraphOptions, "Select a Sensor Type"),
-          applet = null,
           appletLoadingStr = "Sensor Applet Loading ...",
           sensorTypeSelector = document.getElementById("sensor-type-selector"),
           sensorType,
@@ -108,9 +112,9 @@
 
         status.innerHTML = "";
 
-        if(applet != null){
-          applet.remove();
-          applet = null;
+        if(appletGlobal != null){
+          appletGlobal.remove();
+          appletGlobal = null;
         }
         graph.notify(appletLoadingStr);
         sensorType = sensorTypeSelector.value;
@@ -141,15 +145,15 @@
         } else {
           throw "unknown appletClass: " + sensorDef.appletClass;
         }
-        applet = new appletClass({
+        appletGlobal = new appletClass({
           sensorDefinitions: [sensorDef],
           codebase: '../jars',
-          listenerPath: 'applet'
+          listenerPath: 'appletGlobal'
         });
-        applet.on('data', function(data){
+        appletGlobal.on('data', function(data){
           graph.addSamples([data[0]]);
         });
-        applet.append($('body'), function(error){
+        appletGlobal.append($('body'), function(error){
           if(error){
             if (error instanceof sensorAppletInterface.JavaLoadError) {
               status.innerHTML = "It appears that Java applets cannot run in your browser. If you are able to fix this, reload the page to use the sensor";
@@ -171,19 +175,20 @@
 
       // Add the **Start**, **Stop**, and **Clear** buttons.
       $('#start_button').click(function(){
-        applet.start();
+        appletGlobal.start();
       });
 
       $('#stop_button').click(function(){
-        applet.stop();
+        appletGlobal.stop();
       });
 
       $('#clear_button').click(function(){
-        applet.stop();
+        appletGlobal.stop();
         graph.resetSamples([[]]);
         graph.reset();
       });
 
+      })();
     </script>
   </body>
 </html>
