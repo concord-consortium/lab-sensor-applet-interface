@@ -108,9 +108,9 @@ jars.each do |jar_path|
     unless @nosign
       puts "\nsigning:\n  #{path}/#{name}"
       if CONFIG_JAVA[:keystore_path]
-        cmd("jarsigner -storepass #{CONFIG_JAVA[:password]} -keystore #{File.expand_path(CONFIG_JAVA[:keystore_path], PROJECT_ROOT)}  #{name} #{CONFIG_JAVA[:alias]}")
+        cmd("jarsigner -tsa http://tsa.starfieldtech.com -storepass #{CONFIG_JAVA[:password]} -keystore #{File.expand_path(CONFIG_JAVA[:keystore_path], PROJECT_ROOT)}  #{name} #{CONFIG_JAVA[:alias]}")
       else
-        cmd("jarsigner -storepass #{CONFIG_JAVA[:password]} #{name} #{CONFIG_JAVA[:alias]}")
+        cmd("jarsigner -tsa http://tsa.starfieldtech.com -storepass #{CONFIG_JAVA[:password]} #{name} #{CONFIG_JAVA[:alias]}")
       end
       puts "\nverifying:\n  #{path}/#{name}\n"
       cmd("jarsigner -verify #{name}")
