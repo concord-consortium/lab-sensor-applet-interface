@@ -1,6 +1,8 @@
-## Lab Sensor Applet Interface
+## Lab Sensor Applet Interface Dist
 
-This repository contains a Javascript wrapper for the the Concord Consortium's [applet interface to Vernier sensors](https://github.com/concord-consortium/sensor-applets). 
+This is the distribution repository of the [Lab Sensor Applet Interface](http://github.com/concord-consortium/lab-sensor-applet-interface).
+It is a JavaScript library for working with Vernier sensors in the browser.
+The library uses the [sensor-applets project](https://github.com/concord-consortium/sensor-applets) to communicate with native libraries from Vernier.
 
 It should be compatible with the latest (November 2013) security restrictions on Java applets in the browser.
 

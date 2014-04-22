@@ -15,7 +15,8 @@ module.exports = function(grunt) {
       dist: {
       	files: [
           {src: 'examples/**', dest: '<%= distPath %>/'},
-          {src: 'README-dist.md', dest: '<%= distPath %>/README.md'}
+          {src: 'lib/README-dist.md', dest: '<%= distPath %>/README.md'},
+          {src: 'lib/LICENSE-dist', dest: '<%= distPath %>/LICENSE'}
       	]
       }
     },
