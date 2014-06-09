@@ -35,7 +35,7 @@ MW_ANT_BUILD = "ant clean; ant dist2"
 
 PROJECT_LIST = {
   'sensor'         => { :build_type => :download,
-                        :url => 'http://jnlp.concord.org/dev3/org/concord/sensor/sensor/sensor-1.0-20130909.215301-41.jar',
+                        :url => 'http://jars.dev.concord.org/dev3/org/concord/sensor/sensor/sensor-1.0-20130909.215301-41.jar',
                         :version => '1.0-20130909.215301-41',
                         :path => '',
                         :sign => true },
@@ -50,19 +50,19 @@ PROJECT_LIST = {
                         :sign => true },
 
   'sensor-vernier' => { :build_type => :download,
-                        :url => 'http://jnlp.concord.org/dev3/org/concord/sensor/sensor-vernier/sensor-vernier-1.0-20130909.215301-42.jar',
+                        :url => 'http://jars.dev.concord.org/dev3/org/concord/sensor/sensor-vernier/sensor-vernier-1.0-20130909.215301-42.jar',
                         :version => '1.0-20130909.215301-42',
                         :path => '',
                         :sign => true },
 
   'goio-jna'       => { :build_type => :download,
-                        :url => 'http://jnlp.concord.org/dev3/org/concord/sensor/goio-jna/goio-jna-1.0-20140311.155732-45.jar',
+                        :url => 'http://jars.dev.concord.org/dev3/org/concord/sensor/goio-jna/goio-jna-1.0-20140311.155732-45.jar',
                         :version => '1.0-20130314.171142-34',
                         :path => '',
                         :sign => true },
 
   'labquest-jna'   => { :build_type => :download,
-                        :url => 'http://jnlp.concord.org/dev3/org/concord/sensor/labquest-jna/labquest-jna-1.0-20140311.155834-43.jar',
+                        :url => 'http://jars.dev.concord.org/dev3/org/concord/sensor/labquest-jna/labquest-jna-1.0-20140311.155834-43.jar',
                         :version => '1.0-20130909.215301-42',
                         :path => '',
                         :sign => true },
